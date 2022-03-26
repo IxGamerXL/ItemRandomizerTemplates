@@ -1,0 +1,93 @@
+Heavy
+Tough
+Explosive
+Destructive
+Large
+Painful
+Striking
+Sharp
+Metalic
+Seasonal
+Extensive
+Long-Term
+Sticky
+Comical
+Dimensional
+Refined
+Magical
+Reinforced
+Reflective
+Mythic
+Legendary
+Glass
+Advanced
+-
+Block
+Core
+Thruster
+Steering Module
+Solar Panel
+Battery
+Fuel Tank
+Crate
+Laser Weapon
+Energy Blaster
+Missile Launcher
+Healing Weapon
+Connecter
+Separator
+Dampening Module
+Processor
+TNT
+-
+#bv block health
+#bv fire resistence
+\TNT\#bv blast resistence
+#bv laser resistence
+#bv ram resistence
+#randCan be reskined
+#bv weight
+On #event_name: #event_effect
+Core\#bv tow fee
+Core\#bv drone size
+Core\#bv health for all connected blocks
+Core\#bv total weight
+Core\Sends a visual distress signal spanning @rand100m
+Thruster\#bv maximum thrust power
+Thruster\#bv acceleration
+Thruster\#bv deceleration
+Thruster\Uses power instead of fuel
+Steering Module\#bv maximum steer power
+Steering Module\#bv acceleration
+Steering Module\#bv deceleration
+Solar Panel\#bv power generation
+Solar Panel\#bv solar range
+Battery,Fuel Tank,Crate\#bv capacity
+Battery,Fuel Tank\#bv chance of combustion when hit
+Battery\#bv discharge radius on impact
+Battery\Cannot be recharged
+Crate\@rand100% of contained items will scatter instead of disappearing on destroyed
+Laser Weapon,Energy Blaster,Missile Launcher,Healing Weapon\#bv range
+Laser Weapon,Energy Blaster,Missile Launcher,Healing Weapon\#bv ammo/power usage
+Laser Weapon,Energy Blaster,Missile Launcher\#bv damage
+Laser Weapon,Healing Weapon\#bv laser beam width
+Laser Weapon,Healing Weapon\#bv power usage per second
+Energy Blaster,Missile Launcher\#bv projectile speed
+Energy Blaster,Missile Launcher\#bv firerate
+Healing Weapon\#bv healing speed
+Connector\#bv refuel speed
+Connector\+@rand100% charge speed
+Dampening Module\#bv dampening strength
+Processor\#bv processing speed
+Processor\#bv digital storage
+Missile Launcher,TNT\#bv blast radius
+Missile Launcher,TNT\+#rand8s explosion delay
+-
+macro bv @pn@rand100%
+macro tempfx temporarily boosts #randFP by +@rand100% for @rand100 seconds
+randc randCan Can,Cannot
+randc randFP fuel,power
+randc randStat damage,armor,speed,firerate,reload speed,resistence
+randc event_name Attack,Hit,Kill,Spawn,Death,Heal
+randc event_effect #randStat is buffed for @rand100 seconds,neighboring blocks explode violently in a @rand100m radius,attacking/nearby drone is Marked-For-Death,regenerate blocks that have been destroyed for @rand100 seconds or longer (unless detached),attacking/nearby drone's faction members send private signals for you to chase for @rand100 seconds
+rand rand8 8
